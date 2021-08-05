@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1;
+}
+
+:root {
+  --body-color: #f7f7f7;
+  --text-color: #343a40;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.4rem;
+}
+
+header h1 {
+  font-size: 4.4rem;
+  letter-spacing: -1.5px;
+  position: relative;
+  font-weight: 900;
+}
+
+.MessageBox {
+  position: absolute;
+  top: 2rem;
+  right: 4.4rem;
+  font-size: 1.8rem;
+  background-color: #fff3bf;
+  padding: 1.4rem;
+  border-radius: 0.6rem;
+  display: none;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.1s;
+}
+
+main {
+  padding: 9.6rem;
+}
+
+.Main_Section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.color--card {
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.057);
+  padding: 2.4rem;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+.color--card::before {
+  content: "";
+  position: absolute;
+  height: 25rem;
+  width: 25rem;
+  left: 0;
+  top: 0;
+  box-shadow: inset 2.4rem 1.2rem -3.2rem rgba(0, 0, 0, 0.057);
+}
+
+.color--card:hover .copy--icon {
+  display: block;
+}
+
+.color--card .copy--icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke: rgba(255, 255, 255, 0.596);
+  display: none;
+}
+
+/*************************/
+/* Action Section */
+/************************/
+
+.Action_Section {
+  padding: 6.2rem;
+}
+
+.HelperBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.HelperBox p {
+  font-size: 1.4rem;
+}
+
+.Action_Section .HelperBox button {
+  cursor: pointer;
+  padding: 1.6rem 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  border: none;
+  background-color: #7048e8;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  transition: all 0.4s;
+}
+
+.Action_Section .HelperBox button:hover {
+  background: #5f3dc4;
+}
