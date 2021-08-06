@@ -19,7 +19,6 @@ const Box1Text = document.querySelector("#color-code--1");
 const Box2Text = document.querySelector("#color-code--2");
 const Box3Text = document.querySelector("#color-code--3");
 const Box4Text = document.querySelector("#color-code--4");
-const inputHashCode1 = document.querySelector(".inputColorValue1");
 const ClipBoardCopyMessage = document.querySelector("#MessageBox");
 const IconBtn = document.querySelectorAll(".card");
 
@@ -90,7 +89,18 @@ ctaBtn.addEventListener("click", () => {
   MakeColor(colorArr);
 });
 
-// Icon Click Event //
+// Copy Text //
+function CopyMe(TextToCopy) {
+  let TempText = document.createElement("input");
+  TempText.value = TextToCopy;
+  document.body.appendChild(TempText);
+  TempText.select();
+
+  document.execCommand("copy");
+  document.body.removeChild(TempText);
+}
+
+// Icon Copy Event Message //
 IconBtn.forEach((Icon) => {
   Icon.addEventListener("click", function (e) {
     const IconEL = e.target.closest(".color--card");
@@ -102,5 +112,18 @@ IconBtn.forEach((Icon) => {
     setTimeout(() => {
       colorHashCode.style.display = "none";
     }, 1000);
+
+    // For Copying The Text //
+    CopyMe(IconBgColor);
   });
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.code === "Space") {
+    MakeColor(colorArr);
+  } else if (e.code === "KeyC") {
+    CopyMe(IconBgColor);
+  } else {
+    return;
+  }
 });

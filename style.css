@@ -143,3 +143,111 @@ main {
 .Action_Section .HelperBox button:hover {
   background: #5f3dc4;
 }
+
+/*************************/
+/* Media Queries */
+/************************/
+@media (max-width: 1280px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 1120px) {
+  html {
+    font-size: 50%;
+  }
+
+  .HelperBox p {
+    font-size: 2rem;
+  }
+
+  .Action_Section .HelperBox button {
+    font-size: 2rem;
+    padding: 1.8rem 3.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .Main_Section {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.4rem;
+    column-gap: 4.4rem;
+  }
+  .color--card {
+    height: 30rem;
+    width: 30rem;
+  }
+
+  header h1 {
+    font-size: 6.2rem;
+  }
+  .card p {
+    font-weight: 900;
+    font-size: 2.4rem;
+  }
+  main {
+    padding: 2.4rem;
+  }
+
+  .MessageBox {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 568px) {
+  html {
+    font-size: 45%;
+  }
+  header h1 {
+    font-size: 4.2rem;
+    word-spacing: 5px;
+    text-transform: capitalize;
+  }
+  .color--card {
+    height: 25rem;
+    width: 25rem;
+  }
+  .Action_Section {
+    padding: 6.2rem 0;
+  }
+  .HelperBox p {
+    display: none;
+  }
+  .MessageBox {
+    top: 9rem;
+    right: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .color--card {
+    height: 20rem;
+    width: 20rem;
+  }
+  header h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    margin-left: 1rem;
+  }
+  .HelperBox button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 280px) {
+  html {
+    font-size: 30%;
+  }
+}
